@@ -1,4 +1,4 @@
-name: 'Front 이슈 생성'
+name: '✅ Front 이슈 생성'
 description: 'iamfrontend Front Repo에 이슈를 생성하며, 생성된 이슈는 Jira와 연동됩니다.'
 labels: [order]
 title: '이슈 이름을 작성해주세요'
@@ -37,6 +37,6 @@ body:
       label: '참조(References)'
       description: '해당 이슈과 관련된 레퍼런스를 참조해주세요'
       value: |
-        - Reference1
+        - 참고자료
     validations:
       required: false
