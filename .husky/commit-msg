@@ -21,6 +21,7 @@ FIRST_LINE=`head -n1 ${COMMIT_MSG}`
 SECOND_WORD=$(echo $FIRST_LINE | awk '{print $2}')
 RES="needCheck" # needCheck, auto, initial, lintError*, clear
 
+echo $FIRST_LINE
 if [[ $FIRST_LINE =~ ^(Merge branch) ]] ||
    [[ $FIRST_LINE =~ ^(Merge pull request) ]]; then
   RES="auto"
