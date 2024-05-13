@@ -16,8 +16,9 @@
 # 5. '!': 급한 변경 사항인 경우에 추가 (접두사, () 뒤 / 콜론 이전)
 # 6. (): 추가 요약 정보가 필요할 경우 (접두사 뒤 / !, 콜론 이전)
 
-COMMIT_MSG_FILE=$1
-FIRST_LINE=`head -n1 ${COMMIT_MSG_FILE}`
+COMMIT_MSG=$1
+FIRST_LINE=`head -n1 ${COMMIT_MSG}`
+SECOND_WORD=$(echo $FIRST_LINE | awk '{print $2}')
 RES="needCheck" # needCheck, auto, initial, lintError*, clear
 
 if [[ $FIRST_LINE =~ ^(Merge branch) ]] ||
@@ -34,18 +35,7 @@ if [ $RES == "needCheck" ]; then
     RES="lintError1"
   fi
 
-  if [[ ! $FIRST_LINE =~ ^(feat(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(fix(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(docs(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(style(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(refactor(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(chore(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(test(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(design(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(comment(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(rename(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(remove(\(.*\))?!?: ) ]] &&
-     [[ ! $FIRST_LINE =~ ^(!HOTFIX(\(.*\))?!?: ) ]]; then
+  if [[ ! $SECOND_WORD =~ ^(feat|fix|docs|style|refactor|test|chore|file): ]]; then
     RES="lintError2"
   fi
 
