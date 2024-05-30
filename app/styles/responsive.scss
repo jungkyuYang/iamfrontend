@@ -1,0 +1,10 @@
+$desktop1200: 1199.98px;
+$tablet992: 991.98px;
+$mobile768: 767.98px;
+$mobile576: 575.98px;
+
+@mixin response($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
