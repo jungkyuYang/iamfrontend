@@ -1,0 +1,36 @@
+@use './responsive.scss' as *;
+
+.header {
+	@include response($desktop1200) {
+		background-color: red;
+	}
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+
+		.logo-container {
+			.logo-img {
+				width: 100px;
+			}
+		}
+
+		.navigation {
+			ul {
+				display: flex;
+				justify-content: center;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li {
+					color: #fff;
+					text-decoration: none;
+					margin: 0 1rem;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
