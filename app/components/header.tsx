@@ -9,6 +9,7 @@ import LogoSVG from '../../public/image/logo.svg'
 
 const Header = () => {
 	const path = usePathname()
+	console.log('tset')
 
 	return (
 		<header className={styles['header']}>
