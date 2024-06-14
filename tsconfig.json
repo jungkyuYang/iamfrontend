@@ -27,7 +27,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"app/components/Scene.tsx",
-		"app/utils/CameraPositionLogger.jsx"
+		"app/utils/CameraPositionLogger.jsx",
+		"app/custom.d.ts"
 	],
 	"exclude": ["node_modules"]
 }
