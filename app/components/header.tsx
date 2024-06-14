@@ -7,8 +7,9 @@ import { usePathname } from 'next/navigation'
 import styles from '../styles/header.module.scss'
 import LogoSVG from '../../public/image/logo.svg'
 
-export default function Header() {
+const Header = () => {
 	const path = usePathname()
+
 	return (
 		<header className={styles['header']}>
 			<div className={styles['header-container']}>
@@ -35,3 +36,5 @@ export default function Header() {
 		</header>
 	)
 }
+
+export default Header
