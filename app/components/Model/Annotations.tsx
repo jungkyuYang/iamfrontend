@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import TWEEN from '@tweenjs/tween.js'
 
-import annotations from '../../../public/data/annotations.json'
+import annotations from '../../../public/json/annotations.json'
 
 interface AnnotationsProps {
 	controls: React.MutableRefObject<{

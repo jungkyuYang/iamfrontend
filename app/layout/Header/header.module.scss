@@ -1,4 +1,4 @@
-@use './responsive.scss' as *;
+@use '../../styles/responsive.scss' as *;
 
 .header {
 	@include response($desktop1200) {

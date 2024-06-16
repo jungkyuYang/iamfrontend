@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-import styles from '../styles/header.module.scss'
-import LogoSVG from '../../public/image/logo.svg'
+import styles from './header.module.scss'
+import LogoSVG from '../../../public/image/logo.svg'
 
 const Header = () => {
 	const path = usePathname()

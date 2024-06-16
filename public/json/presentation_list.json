@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"text": "하드 스킬",
+		"name": "HardSkills"
+	},
+	{
+		"id": 2,
+		"text": "소프트 스킬",
+		"name": "SoftSkills"
+	},
+	{
+		"id": 3,
+		"text": "경력",
+		"name": "Career"
+	},
+	{
+		"id": 4,
+		"text": "제안하기",
+		"name": "Propose"
+	}
+]
