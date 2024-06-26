@@ -2,8 +2,8 @@ import { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Fisheye, OrbitControls, Environment, Html } from '@react-three/drei'
 
-import { Frame, Dog, Camera, Cactus, Box } from './Scene'
-import { Annotations, Tween } from './Annotations'
+import { Frame, Dog, Camera, Cactus, Box } from './Scene/Scene'
+import { Annotations, Tween } from './Annotations/Annotations'
 import CameraPostionLogger from '../../utils/CameraPositionLogger'
 
 function Model() {

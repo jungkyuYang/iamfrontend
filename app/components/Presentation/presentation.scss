@@ -1,0 +1,12 @@
+.dialog-wrapper {
+	position: absolute;
+	transform: translate(50%, calc(100% - 700px));
+	transition: transform 0.3s ease-in-out;
+	background-color: red;
+}
+
+@media (max-width: 500px) {
+	.dialog-wrapper {
+		transform: translate(50%, calc(100% - 120px));
+	}
+}

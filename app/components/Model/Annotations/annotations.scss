@@ -1,0 +1,21 @@
+svg {
+	height: 34px;
+	width: 34px;
+	transform: translate(-16px, -16px);
+	cursor: pointer;
+
+	circle {
+		cx: 17;
+		cy: 17;
+		r: 16;
+		stroke: white;
+		stroke-width: 3;
+		fill: rgba(0, 0, 0, 0.66);
+	}
+
+	text {
+		fill: white;
+		font-size: 17px;
+		font-family: monospace;
+	}
+}

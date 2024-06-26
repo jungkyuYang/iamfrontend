@@ -3,7 +3,9 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import TWEEN from '@tweenjs/tween.js'
 
-import annotations from '../../../public/json/annotations.json'
+import annotations from '../../../../public/json/annotations.json'
+import './annotations.scss'
+import Presentation from '../../Presentation/Presentation'
 
 interface AnnotationsProps {
 	controls: React.MutableRefObject<{
@@ -54,43 +56,28 @@ function Annotations({ controls }: AnnotationsProps) {
 
 	return (
 		<>
-			{annotations.map((a, i) => {
+			{annotations.map((item, i) => {
 				return (
-					<Html key={i} position={[a.lookAt.x, a.lookAt.y, a.lookAt.z]}>
-						<svg
-							height="34"
-							width="34"
-							transform="translate(-16 -16)"
-							style={{ cursor: 'pointer' }}
-						>
-							<circle
-								cx="17"
-								cy="17"
-								r="16"
-								stroke="white"
-								strokeWidth="3"
-								fill="rgba(0,0,0,.66)"
-								onPointerDown={() => {
-									handleAnnotationClick(a, i)
-								}}
-							/>
-							<text
-								x="12"
-								y="22"
-								fill="white"
-								fontSize={17}
-								fontFamily="monospace"
-								style={{ pointerEvents: 'none' }}
-							>
-								{i + 1}
-							</text>
-						</svg>
-						{a.title && i === selected && (
-							<div>
-								<p>{a.title}</p>
-							</div>
-						)}
-					</Html>
+					<>
+						<Html key={i} position={[item.lookAt.x, item.lookAt.y, item.lookAt.z]}>
+							<svg>
+								<circle
+									onPointerDown={() => {
+										handleAnnotationClick(item, i)
+									}}
+								/>
+								<text x="12" y="22" style={{ pointerEvents: 'none' }}>
+									{i + 1}
+								</text>
+							</svg>
+							{item.title && i === selected && (
+								<div>
+									<p>{item.title}</p>
+									<Presentation />
+								</div>
+							)}
+						</Html>
+					</>
 				)
 			})}
 		</>

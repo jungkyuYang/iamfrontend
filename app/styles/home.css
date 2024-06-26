@@ -2,10 +2,9 @@ body,
 html,
 #root {
 	width: 100%;
-	height: 100%;
+	height: 85%;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
 
 #root {

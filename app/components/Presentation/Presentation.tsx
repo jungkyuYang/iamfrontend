@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import './presentation.scss'
 import Presentation_list from '../../../public/json/presentation_list.json'
 import HardSkills from './HardSkills'
 import SoftSkills from './SoftSkills'
@@ -26,7 +27,8 @@ function Presentation() {
 	}
 
 	return (
-		<div>
+		<div className="dialog-wrapper">
+			hi
 			{Presentation_list.map(data => {
 				return (
 					<button key={data.id} name={data.name} onClick={handleClickButton}>
